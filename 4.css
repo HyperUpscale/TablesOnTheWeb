@@ -1,0 +1,34 @@
+body {
+    min-height: 50vh;
+    background: url(images/html_table.jpg) center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vertical borders for each cell */
+.horizontal-borders td, .horizontal-borders th {
+    border-right: 1px solid var(--border-color, #000); /* Default color */
+}
+
+.horizontal-borders tr:not(:last-child) {
+    border-bottom: 1px solid var(--border-color, #000); /* Default color */
+}
+/* Vertical border for the first cell of each row */
+.horizontal-borders tr td:first-child, .horizontal-borders 
+    border-left: 1px solid var(--border-color, #000); /* Default color */
+}
+
+/* Vertical borders for each cell */
+.vertical-borders td, .vertical-borders th {
+    border-right: 1px solid var(--border-color, #000); /* Default color */
+}
+
+/* Vertical border for the first cell of each row */
+.vertical-borders tr td:first-child, .vertical-borders tr th:first-child {
+    border-left: 1px solid var(--border-color, #000); /* Default color */
+}
+
+#customers_table {
+    background-image: linear-gradient(to right, lightblue, lightgreen); /* Gradient from lightblue to lightgreen */
+}

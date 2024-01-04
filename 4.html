@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and Image Gallery</title>
+    <link rel="stylesheet" href="4.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100vh;
+        }
+        .quadrant-1 { grid-area: 1 / 1 / 2 / 2; }
+        .quadrant-2 { grid-area: 1 / 2 / 2 / 3; }
+        .quadrant-3 { grid-area: 2 / 1 / 3 / 2; }
+        .quadrant-4 { grid-area: 2 / 2 / 3 / 3; }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="quadrant-1">
+            <textarea id="inputArea" class="input-area" placeholder="Paste your table content here..."></textarea>
+            <button onclick="generateTable()" class="button">Generate</button>
+            <div id="tableContainer"></div>
+        </div>
+        <div class="quadrant-2">
+            <label>
+                <input type="checkbox" id="selectTableCheckbox"> Select Table for Export
+            </label>
+            <button id="showAllColumns">Show All Columns</button>
+            <input type="color" id="borderColorPicker" value="#000000">
+            <button id="horizontalBorderBtn">Toggle Horizontal Borders</button>
+            <button id="verticalBorderBtn">Toggle Vertical Borders</button>
+            
+            
+        </div>
+        <div class="quadrant-3">
+            <!-- Elements for quadrant 3 -->
+        </div>
+        <div class="quadrant-4">
+            <button onclick="saveSelectedAsImage()">Save as Image</button>
+            <button onclick="saveSelectedAsPDF()">Save as PDF</button>
+        </div>
+    </div>
+    <script src="4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</body>
+</html>
